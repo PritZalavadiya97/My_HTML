@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Flex_Box</title>
+        <style>
+            .container{
+                width: 100%;
+                height: 544px;
+                border: 1px solid blue;
+                display: flex;
+                margin: 0 auto;
+                /* Property of flex */
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .item{
+                background-color: black;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+                border: 2px solid red;
+                width: 120px;
+                height: 120px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .one{
+                flex: 1;
+            }
+            .two{
+                flex: 2;
+            }
+            .three{
+                flex: 1;
+            }
+            .four{
+                flex: 2;
+            }
+            .five{
+                flex: 1;
+
+            }
+            .six{
+                flex: 2;
+            }
+
+            @media(max-width:767px) {
+                .container{
+                    justify-content: center;
+                }
+            }
+
+        </style>
+    </head>
+    <main>
+        
+        <div class="container">
+            <div class="item one"> one </div>
+            <div class="item two"> two </div>
+            <div class="item three"> three </div>
+            <div class="item foue"> four </div>
+            <div class="item five"> five </div>
+            <div class="item six"> six </div>
+        </div>
+        
+    </main>
+</html>
