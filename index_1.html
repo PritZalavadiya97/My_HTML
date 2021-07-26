@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>index_1</title>
-    </head>
-    <body>
-        <main>
-            <h1>index_1</h1>
-            <h2>index_1</h2>
-            <h3>index_1</h3>
-            <h4>index_1</h4>
-            <h5>index_1</h5>
-            <h6>index_1</h6>
-        </main>
-    </body>
+
+<head>
+    <title>index_1</title>
+    <style>
+        /* make default radio 'invisible' */
+        input[type=radio] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        /* make new radio outer circle */
+        input[type=radio]:before {
+            content: " ";
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: transparent;
+        }
+
+        /* change colour of radio outer circle when checked */
+        input[type=radio]:checked:before {
+            border-color: green;
+        }
+
+        /* make new radio inner circle when checked */
+        input[type=radio]:checked:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            top: 22%;
+            left: 0.5%;
+            background: green;
+        }
+
+        .one {
+            position: relative;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>index_1</h1>
+        <h2>index_2</h2>
+        <h3>index_3</h3>
+        <h4>index_4</h4>
+        <h5>index_5</h5>
+        <h6>index_6</h6>
+        <div class="one">
+            <input type="radio" checked>one
+        </div>
+        <div class="two">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="one">
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+            </div>
+            <div class="one">
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label>
+            </div>
+        </div>
+    </main>
+</body>
+
 </html>
